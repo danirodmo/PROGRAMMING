@@ -24,7 +24,7 @@ while contador<=vidas:
             listaGuion[letra]=letraIngresada
     print(listaGuion)
             
-
+#Prueba
 
 '''    for i in range(len(listaPalabra)):
         print("_", end=" ") # end trae el salto del linea y lo reemplaza por lo que está dentro de las comillas
