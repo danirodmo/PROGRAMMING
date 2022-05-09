@@ -1,7 +1,7 @@
 import random
 vidas=5
 
-palabras=["pyton","programador","excel","random"]
+palabras=["python","programador","excel","random","anaconda","reto"]
 
 palabra=random.choice(palabras)
 print(palabra)
