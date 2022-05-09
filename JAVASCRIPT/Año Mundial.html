@@ -1,0 +1,26 @@
+<meta charset="UTF-8">
+
+<h1>PROGRAMA MUNDIALES </h1>
+
+<script>
+
+    function saltarLinea() {
+        document.write("<br>");    
+        document.write("<br>");    
+        document.write("<br>");    
+    }  
+
+    function imprimir(frase) {
+        document.write(frase);
+        saltarLinea();
+    }
+
+	var anhoMundial=1930;
+	var mundialInicial= parseInt(prompt("Ingrese el año desde el cual quiere empezar"));
+	//var ultimoMundial= parseInt(prompt("Ingrese el año desde hasta el cual quiere calcular"));	
+	while(mundialInicial<2022){
+		mundialInicial=mundialInicial+4;
+		imprimir ("El mundial se jugó en el año "+mundialInicial);
+	} 
+//	alert (FIN)
+</script>

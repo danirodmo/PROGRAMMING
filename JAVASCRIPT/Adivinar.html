@@ -1,0 +1,39 @@
+<meta charset="UTF-8">
+
+<h1>PROGRAMA JUEGO DE ADIVINACION </h1>
+
+<script>
+
+    function saltarLinea() {
+        document.write("<br>");    
+        document.write("<br>");    
+        document.write("<br>");    
+    }  
+
+    function imprimir(frase) {
+        document.write(frase);
+        saltarLinea();
+    }
+
+	//function sortea(n) {
+	//return Math.round(Math.random()*n);	
+	//}
+
+    	var n = parseInt(prompt("Ingrese un número entre 0 y 20"));
+	var numeroAdivinado = parseInt(prompt("Adivine lo que escogió la máquina ingresando un número entre cero y el número seleccionado"));
+	var numeroMaquina=(Math.round(Math.random()*n));
+	
+	imprimir(n);
+	imprimir(numeroMaquina);
+	imprimir(numeroAdivinado);
+	
+	
+	if (numeroMaquina == numeroAdivinado) {
+	imprimir("Usted acertó, el número pesando por la máquina fue "+numeroMaquina +", y su número fue "+numeroAdivinado);
+	}
+
+	else {
+   	imprimir("Usted erró, el número escogido por la máquina era " + numeroMaquina + " y usted seleccionó el número "+ numeroAdivinado);    
+  	}
+
+</script>
