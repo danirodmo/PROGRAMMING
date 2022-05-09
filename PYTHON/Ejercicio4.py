@@ -1,0 +1,12 @@
+peras=int(input())
+manzanas=int(input())
+mandarinas=int(input())
+naranjas=int(input())
+precioPeras=peras*1800
+precioManzanas=manzanas*2000
+precioMandarinas=mandarinas*1900
+precioNaranjas=naranjas*3600
+Subtotal=peras*precioPeras+manzanas*precioManzanas+mandarinas*precioMandarinas+naranjas*precioNaranjas
+Total=Subtotal*1.19
+print(Subtotal)
+print(Total)
