@@ -4,7 +4,6 @@ def temporizador(hh,mm,ss):
         print("Ingrese valores correctos")
 
     while hh>=0 and mm>=0 and ss>=0:
-        
         time.sleep(1)
         ss-=1
         if ss==0 and mm>0:
@@ -14,5 +13,5 @@ def temporizador(hh,mm,ss):
             hh-=1
             mm=59
             ss=59
-        print(f"{hh}:{mm}:{ss}")#.os.system("cls")
+        print(f"{hh}:{mm}:{ss}")
 temporizador(1,10,6)
