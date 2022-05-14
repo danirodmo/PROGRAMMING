@@ -2,17 +2,15 @@
 def fibonacci(num):
     a=0
     b=1
-    c=1
+    c=a+b
     numFibonacci=[a,b,c]
     #num=int(input("Ingrse el número hasta el cual desea calcular la secuencia Fibonacci: "))
-    for i in range (3,num):
-        num=0
-        num=num+1
+    for i in range (2,num):
+        a=b
+        b=c
+        c=a+b
+        numFibonacci.append(c)
+    print(f"La secuencia Fibonacci hasta el número {num} es: ")
+    return numFibonacci
 
-        segundoNum=fibonacci+c
-        d=0
-        numFibonacci.append(num)
-    print(f"La secuencia Fibonacci hasta el número {num} es: {fibonacci}")
-    print(numFibonacci)
-
-fibonacci(10)
+print(fibonacci(15))
