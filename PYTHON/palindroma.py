@@ -15,7 +15,7 @@ def palindroma(fraseOr):
     else:
         print(f"La frase {fraseOr} no es palíndroma")
     
-palindroma("Yo haGo Yogá hoy")
+palindroma("Yo haGO Yogá hoy")
 
 '''FRASES PALÍNDROMAS:            
 DábalE arroz a la zorra el abad
