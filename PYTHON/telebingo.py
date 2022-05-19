@@ -11,7 +11,11 @@ for balota in range (1,76):
             balotasJugadas.append("B"+str(balota))
         elif balota>15 and balota<=30:
             print(f"I{balota}")
+<<<<<<< HEAD
             balotasJugadas.append("I",str(balota))
+=======
+            balotasJugadas.append("I"+str(balota))
+>>>>>>> 7ed655796b3627ea3bdb603fa88d6ec6f3a9f4cb
         elif balota>30 and balota<=45:
             print(f"N{balota}")
             balotasJugadas.append("N"+str(balota))
