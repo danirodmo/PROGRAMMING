@@ -9,11 +9,11 @@ print(conv_a_seg(1,1,6))
 
 def conv_a_hhmmss(tTotal):
     horas=tTotal/3600
-    decHoras=horas%1 #esto da los decimales de la hora para calcular los minutos
     hh=int(horas//1)
+    decHoras=horas-hh #esto da los decimales de la hora para calcular los minutos
     minutos=decHoras*60
-    decMinutos=minutos%1
     mm=int(minutos//1)
+    decMinutos=minutos-mm
     seg=decMinutos*60
     ss=int(seg//1)
       
@@ -30,7 +30,7 @@ def temporizador(hh,mm,ss):
 
         while tTotal>0:
             tTotal-=1
-            time.sleep(0.3)
+            time.sleep(0.6)
             #print(tTotal)
             conv_a_hhmmss(tTotal)
             if hh==0 and mm==0 and ss==0:
