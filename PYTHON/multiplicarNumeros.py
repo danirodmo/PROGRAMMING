@@ -1,6 +1,6 @@
 def multiplicarNumeros(numeros):
     mult=1
-    for i in range(len(numeros)):
+    for i in numeros:
         mult*=numeros[i]
     return mult
 
