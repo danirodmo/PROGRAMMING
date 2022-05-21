@@ -9,3 +9,5 @@ for key in notasPython.keys():
 for valor in notasPython.values():
     print(valor[0])
 
+    #escribir funcion que permita traducitr de codigo morse a texto y viceversa
+
