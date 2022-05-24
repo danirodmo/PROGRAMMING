@@ -3,9 +3,10 @@ with open("C:/Users/drodriguez/Downloads/paquetes.json") as file:
     empresa = json.load(file)
 
 print((len(empresa['PAQUETES'])))
-
-
+#print(empresa['PAQUETES']['ALTO'])
+print(empresa["PAQUETES"][1]["ALTO"])
 #exit()
+
 def calcularCosto(alto,ancho,profundo):
     volumen=alto*ancho*profundo
     if alto<=30:
@@ -22,7 +23,7 @@ def costoTotal(listaPaquetes,descuento):
         alto=empresa["PAQUETES"][paquete]["ALTO"]
         ancho=empresa["PAQUETES"][paquete]["ANCHO"]
         profundo=empresa["PAQUETES"][paquete]["PROFUNDO"]
-        Total=(Total+calcularCosto(alto,ancho,profundo))
-    return Total*(1-descuento/100)
+        Total+=calcularCosto(alto,ancho,profundo)*(1-descuento/100)
+    return Total
 
 print (costoTotal(empresa['PAQUETES'], 10))
