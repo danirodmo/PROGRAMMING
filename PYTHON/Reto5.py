@@ -14,16 +14,50 @@ def calcularCosto(alto,ancho,profundo):
     if alto>30:
         costoEnvio=5*volumen+2000
     if costoEnvio>10000:
-        costoEnvio=costoEnvio*1.19
+        costoEnvio*=1.19
     return costoEnvio
 
 def costoTotal(listaPaquetes,descuento):
     Total=0
     for paquete in range (len(listaPaquetes)):
-        alto=empresa["PAQUETES"][paquete]["ALTO"]
-        ancho=empresa["PAQUETES"][paquete]["ANCHO"]
-        profundo=empresa["PAQUETES"][paquete]["PROFUNDO"]
-        Total+=calcularCosto(alto,ancho,profundo)*(1-descuento/100)
-    return Total
+        alto=listaPaquetes[paquete]['ALTO']
+        ancho=listaPaquetes[paquete]['ANCHO']
+        profundo=listaPaquetes[paquete]['PROFUNDO']
+        Total+=calcularCosto(alto,ancho,profundo)
+    return Total*(1-descuento/100)
 
 print (costoTotal(empresa['PAQUETES'], 10))
+
+
+exit()
+print (costoTotal(paquetes, 0))
+paquetes = [
+  {
+    'ALTO': 20,
+    'ANCHO': 10,
+    'PROFUNDO': 5
+  },
+  {
+    'ALTO': 7,
+    'ANCHO': 10,
+    'PROFUNDO': 5
+  },
+]
+print (costoTotal(paquetes, 10))
+paquetes = [
+  {
+    'ALTO': 20,
+    'ANCHO': 10,
+    'PROFUNDO': 5
+  },
+  {
+    'ALTO': 7,
+    'ANCHO': 10,
+    'PROFUNDO': 5
+  },
+]
+print (costoTotal(paquetes, 15))
+25585.0
+6075.0
+5737.5
+
