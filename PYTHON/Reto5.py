@@ -19,10 +19,10 @@ def calcularCosto(alto,ancho,profundo):
 
 def costoTotal(listaPaquetes,descuento):
     Total=0
-    for paquete in range (len(listaPaquetes)):
-        alto=listaPaquetes[paquete]['ALTO']
-        ancho=listaPaquetes[paquete]['ANCHO']
-        profundo=listaPaquetes[paquete]['PROFUNDO']
+    for paquete in listaPaquetes:
+        alto=paquete['ALTO']
+        ancho=paquete['ANCHO']
+        profundo=paquete['PROFUNDO']
         Total+=calcularCosto(alto,ancho,profundo)
     return Total*(1-descuento/100)
 
